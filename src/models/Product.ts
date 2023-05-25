@@ -1,30 +1,30 @@
 export interface ProductDB {
-  id: string,
-  name: string,
-  price: number,
-  created_at: string
+    id: string,
+    name: string,
+    price: number,
+    created_at: string
 }
 
 // é o modelo de Product que o front receberá (createdAt camelCase)
 export interface ProductModel {
-  id: string,
-  name: string,
-  price: number,
-  createdAt: string
+    id: string,
+    name: string,
+    price: number,
+    createdAt: string
 }
 
-export class Product {    
+export class Product {
     constructor(
         private id: string,
         private name: string,
         private price: number,
         private createdAt: string
-    ) {}
+    ) { }
 
     public getId(): string {
         return this.id
     }
-    
+
     public setId(value: string): void {
         this.id = value
     }
